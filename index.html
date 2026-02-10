@@ -46,3 +46,170 @@
                 <div class="hero-image">
                     <img src="assets/nexus-hero.svg" alt="Custom Liquid Cooled PC">
                 </div>
+            </div>
+        </section>
+
+        <section id="configurator" class="config-section">
+            <div class="container">
+                <h2 style="margin-bottom: 40px; text-align: center;">Core Components</h2>
+
+                <div class="step-card">
+                    <span class="step-number">01</span>
+                    <div class="step-header">
+                        <h3>El Corazón (CPU & GPU)</h3>
+                    </div>
+
+                    <h4 style="margin-bottom: 15px; color: var(--text-dim);">Procesador</h4>
+                    <div class="option-grid" id="cpu-options">
+                        <div class="option-card" onclick="selectOption('cpu', 600, this)">
+                            <img src="assets/icon-cpu.svg" class="option-img" alt="Intel CPU">
+                            <div class="option-name">Intel Core Ultra 9</div>
+                            <div class="option-price">+600 €</div>
+                        </div>
+                        <div class="option-card" onclick="selectOption('cpu', 550, this)">
+                            <img src="assets/icon-cpu-amd.svg" class="option-img" alt="AMD CPU">
+                            <div class="option-name">AMD Ryzen 9 9950X</div>
+                            <div class="option-price">+550 €</div>
+                        </div>
+                    </div>
+
+                    <h4 style="margin: 30px 0 15px; color: var(--text-dim);">Tarjeta Gráfica</h4>
+                    <div class="option-grid" id="gpu-options">
+                        <div class="option-card" onclick="selectOption('gpu', 2000, this)">
+                            <img src="assets/icon-gpu.svg" class="option-img" alt="NVIDIA GPU">
+                            <div class="option-name">NVIDIA RTX 5090 Ti</div>
+                            <div class="option-price">+2.000 €</div>
+                        </div>
+                        <div class="option-card" onclick="selectOption('gpu', 1200, this)">
+                            <img src="assets/icon-gpu.svg" class="option-img" alt="Radeon GPU">
+                            <div class="option-name">Radeon RX 8900 XT</div>
+                            <div class="option-price">+1.200 €</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">02</span>
+                    <div class="step-header">
+                        <h3>Estética y Refrigeración</h3>
+                    </div>
+                    <div class="option-grid">
+                        <div class="option-card" onclick="selectOption('case', 200, this)">
+                            <img src="assets/icon-case.svg" class="option-img" alt="Case Black">
+                            <div class="option-name">Obsidian Tower (Negra)</div>
+                            <div class="option-price">+200 €</div>
+                        </div>
+                        <div class="option-card" onclick="selectOption('case', 220, this)">
+                            <img src="assets/icon-case.svg" class="option-img" style="filter: invert(1);"
+                                alt="Case White">
+                            <div class="option-name">Snowblind View (Blanca)</div>
+                            <div class="option-price">+220 €</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">03</span>
+                    <div class="step-header">
+                        <h3>Almacenamiento Masivo</h3>
+                    </div>
+                    <div class="option-grid">
+                        <div class="option-card" onclick="toggleOption('storage', 150, this)">
+                            <div class="option-name">2TB NVMe Gen5</div>
+                            <div class="option-price">150 €</div>
+                        </div>
+                        <div class="option-card" onclick="toggleOption('storage', 250, this)">
+                            <div class="option-name">4TB SSD SATA</div>
+                            <div class="option-price">250 €</div>
+                        </div>
+                        <div class="option-card" onclick="toggleOption('storage', 180, this)">
+                            <div class="option-name">8TB HDD (Archivo)</div>
+                            <div class="option-price">180 €</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="ecosystem" style="padding-bottom: 80px;">
+            <div class="container">
+                <h2>Completa tu Battlestation</h2>
+                <div class="ecosystem-grid">
+                    <div class="eco-card">
+                        <div>
+                            <h4>OLED 49" Ultrawide</h4>
+                            <span style="color: var(--accent-secondary);">1.200 €</span>
+                        </div>
+                        <button onclick="toggleEco(1200, this)">+ AÑADIR</button>
+                    </div>
+                    <div class="eco-card">
+                        <div>
+                            <h4>27" 360Hz Esports</h4>
+                            <span style="color: var(--accent-secondary);">700 €</span>
+                        </div>
+                        <button onclick="toggleEco(700, this)">+ AÑADIR</button>
+                    </div>
+                    <div class="eco-card">
+                        <div>
+                            <h4>Stream Deck MK.2</h4>
+                            <span style="color: var(--accent-secondary);">150 €</span>
+                        </div>
+                        <button onclick="toggleEco(150, this)">+ AÑADIR</button>
+                    </div>
+                    <div class="eco-card">
+                        <div>
+                            <h4>Key Light Air</h4>
+                            <span style="color: var(--accent-secondary);">130 €</span>
+                        </div>
+                        <button onclick="toggleEco(130, this)">+ AÑADIR</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" style="background: var(--bg-card); padding: 80px 0;">
+            <div class="container">
+                <h2>Centro de Mando</h2>
+                <div class="drivers-grid">
+                    <a href="https://www.nvidia.com/download/index.aspx" target="_blank" class="driver-btn">
+                        <h3 style="color: #76b900;">NVIDIA Drivers</h3>
+                        <span style="color: #888;">GeForce Experience</span>
+                    </a>
+                    <a href="https://www.amd.com/en/support" target="_blank" class="driver-btn amd">
+                        <h3 style="color: #ef0707;">AMD Drivers</h3>
+                        <span style="color: #888;">Adrenalin Edition</span>
+                    </a>
+                    <a href="https://benchmarks.ul.com/3dmark" target="_blank" class="driver-btn bench">
+                        <h3 style="color: #ff6600;">3DMark</h3>
+                        <span style="color: #888;">Benchmark Tool</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="payment-methods" style="margin-bottom: 30px;">
+                <span style="border: 1px solid #333; padding: 5px 10px; border-radius: 4px;">VISA</span>
+                <span style="border: 1px solid #333; padding: 5px 10px; border-radius: 4px;">Mastercard</span>
+                <span style="border: 1px solid #333; padding: 5px 10px; border-radius: 4px;">Bitcoin</span>
+            </div>
+            <a href="#" class="discord-btn">
+                Únete a Discord
+            </a>
+            <div class="footer-links">
+                <a href="#">Garantía</a>
+                <a href="#">Envíos</a>
+                <a href="#">Términos</a>
+            </div>
+            <p>&copy; 2026 NEXUS CUSTOMS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
