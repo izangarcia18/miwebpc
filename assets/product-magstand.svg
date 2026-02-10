@@ -1,0 +1,19 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg" style="background-color: #eaecf0;">
+  <defs>
+    <pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#ccc" />
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#dot-grid)" />
+
+  <!-- MagStand Side Profile -->
+  <path d="M 150 300 L 250 300 L 250 150 L 200 100" fill="none" stroke="#1d1d1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="200" cy="100" r="40" fill="#fff" stroke="#1d1d1f" stroke-width="3"/>
+  
+  <!-- Magnetic Field Lines (Abstract) -->
+  <path d="M 150 80 Q 130 100 150 120" fill="none" stroke="#ff0000" stroke-width="1" stroke-dasharray="2"/>
+  <path d="M 140 70 Q 110 100 140 130" fill="none" stroke="#ff0000" stroke-width="1" stroke-dasharray="2"/>
+
+  <text x="20" y="380" font-family="monospace" font-size="10" fill="#1d1d1f">MODEL: MST-01</text>
+  <text x="20" y="390" font-family="monospace" font-size="10" fill="#86868b">ALUMINUM_ALLOY</text>
+</svg>

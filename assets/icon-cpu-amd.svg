@@ -1,0 +1,8 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="20" width="60" height="60" fill="none" stroke="#ef0707" stroke-width="2"/>
+  <rect x="35" y="35" width="30" height="30" fill="#ef0707" opacity="0.2"/>
+  <!-- Pins -->
+  <path d="M 20 25 L 15 25" stroke="#ef0707" stroke-width="1"/>
+  <path d="M 20 35 L 15 35" stroke="#ef0707" stroke-width="1"/>
+  <path d="M 20 45 L 15 45" stroke="#ef0707" stroke-width="1"/>
+</svg>

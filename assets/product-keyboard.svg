@@ -1,0 +1,6 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg" style="background-color: #f9f9f9;">
+  <rect x="50" y="150" width="300" height="100" rx="8" fill="#e1e1e1" stroke="#333" stroke-width="2"/>
+  <!-- Keycaps -->
+  <rect x="60" y="160" width="280" height="80" fill="none" stroke="#888" stroke-dasharray="4"/>
+  <text x="200" y="300" font-family="monospace" font-size="10" fill="#333" text-anchor="middle">ORBIT_KEY_V2 (MECHANICAL)</text>
+</svg>

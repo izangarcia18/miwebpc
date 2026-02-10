@@ -1,0 +1,35 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" style="background: transparent;">
+  <!-- Aura -->
+  <defs>
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- PC Case -->
+  <rect x="200" y="100" width="400" height="450" rx="10" fill="rgba(20,20,20,0.8)" stroke="#444" stroke-width="2" />
+  
+  <!-- Tempered Glass Tint -->
+  <rect x="220" y="120" width="360" height="410" fill="rgba(0, 234, 255, 0.05)" stroke="none"/>
+
+  <!-- Liquid Cooling Pipes -->
+  <path d="M 350 200 Q 400 150 450 200 T 550 200" fill="none" stroke="#00eaff" stroke-width="4" filter="url(#neon-glow)" opacity="0.8"/>
+  <path d="M 350 220 Q 400 170 450 220 T 550 220" fill="none" stroke="#b000ff" stroke-width="4" filter="url(#neon-glow)" opacity="0.8"/>
+
+  <!-- RGB Fans -->
+  <circle cx="280" cy="200" r="40" fill="none" stroke="#b000ff" stroke-width="2" filter="url(#neon-glow)"/>
+  <circle cx="280" cy="300" r="40" fill="none" stroke="#00eaff" stroke-width="2" filter="url(#neon-glow)"/>
+  <circle cx="280" cy="400" r="40" fill="none" stroke="#b000ff" stroke-width="2" filter="url(#neon-glow)"/>
+
+  <!-- GPU Block -->
+  <rect x="350" y="350" width="200" height="50" rx="4" fill="#111" stroke="#333" />
+  <text x="370" y="380" font-family="monospace" fill="#fff" font-size="10">RTX 5090 Ti</text>
+  <rect x="350" y="395" width="200" height="2" fill="#00eaff" filter="url(#neon-glow)"/>
+
+  <!-- Mist/Smoke (Abstract) -->
+  <path d="M 200 550 Q 300 500 400 550 T 600 550" fill="none" stroke="#fff" stroke-width="20" opacity="0.1" filter="url(#neon-glow)"/>
+</svg>
