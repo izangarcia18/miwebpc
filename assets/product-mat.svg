@@ -1,5 +1,0 @@
-<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg" style="background-color: #f9f9f9;">
-  <rect x="50" y="150" width="300" height="100" rx="10" fill="#555"/>
-  <text x="200" y="205" font-family="monospace" font-size="20" fill="#777" text-anchor="middle" transform="rotate(-10 200 205)">FELT TEXTURE</text>
-  <text x="200" y="300" font-family="monospace" font-size="10" fill="#333" text-anchor="middle">DESK_MAT_FELT</text>
-</svg>
