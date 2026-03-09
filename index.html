@@ -295,23 +295,26 @@
                 <div class="logo">IGM</div>
                 <p class="role-subtitle">Multiplatform Dev</p>
             </div>
-            <nav class="nav-menu">
-                <button class="nav-item active" onclick="navigate('home')"><i class='bx bx-home'></i> <span>Inicio</span></button>
-                <button class="nav-item" onclick="navigate('about')"><i class='bx bx-user'></i> <span>Sobre Mí</span></button>
-                <button class="nav-item" onclick="navigate('experience')"><i class='bx bx-briefcase'></i> <span>Experiencia</span></button>
-                <button class="nav-item" onclick="navigate('skills')"><i class='bx bx-code-alt'></i> <span>Habilidades</span></button>
-                <button class="nav-item" onclick="navigate('projects')"><i class='bx bx-folder'></i> <span>Proyectos</span></button>
-                <button class="nav-item" onclick="navigate('letter')"><i class='bx bx-file'></i> <span>Carta</span></button>
-                <button class="nav-item" onclick="navigate('academic')"><i class='bx bx-book-open'></i> <span>Académico</span></button>
-                <button class="nav-item" onclick="navigate('memory')"><i class='bx bx-archive'></i> <span>Memoria</span></button>
+            
+            <nav class="nav-menu" aria-label="Navegación principal">
+                <a href="index.html" class="nav-item active" aria-label="Ir a Inicio"><i class='bx bx-home'></i> <span>Inicio</span></a>
+                <a href="sobre-mi.html" class="nav-item" aria-label="Ir a Sobre Mí"><i class='bx bx-user'></i> <span>Sobre Mí</span></a>
+                <a href="proyectos.html" class="nav-item" aria-label="Ver Proyectos"><i class='bx bx-folder'></i> <span>Proyectos</span></a>
+                
+                <button class="nav-item" onclick="navigate('experience')" aria-label="Ver Experiencia"><i class='bx bx-briefcase'></i> <span>Experiencia</span></button>
+                <button class="nav-item" onclick="navigate('skills')" aria-label="Ver Habilidades"><i class='bx bx-code-alt'></i> <span>Habilidades</span></button>
+                <button class="nav-item" onclick="navigate('letter')" aria-label="Leer Carta"><i class='bx bx-file'></i> <span>Carta</span></button>
+                <button class="nav-item" onclick="navigate('academic')" aria-label="Ver Info Académica"><i class='bx bx-book-open'></i> <span>Académico</span></button>
+                <button class="nav-item" onclick="navigate('memory')" aria-label="Ver Memoria"><i class='bx bx-archive'></i> <span>Memoria</span></button>
             </nav>
+
             <div class="sidebar-footer">
                 <div class="social-links">
-                    <a href="https://github.com/izangarcia18" target="_blank"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                    <a href="mailto:izan.g.m@example.com"><i class='bx bx-envelope'></i></a>
+                    <a href="https://github.com/izangarcia18" target="_blank" aria-label="Perfil de GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" aria-label="Perfil de LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="mailto:izan.g.m@example.com" aria-label="Enviar email"><i class='bx bx-envelope'></i></a>
                 </div>
-                <button id="theme-toggle" class="theme-btn">
+                <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema visual">
                     <i class='bx bx-moon'></i><span>Tema</span>
                 </button>
                 <p class="copyright">&copy; 2026 Izan G.</p>
@@ -321,8 +324,12 @@
         <main class="main-content">
             <header class="mobile-header">
                 <div class="logo-mobile">IGM</div>
-                <button class="menu-toggle" onclick="toggleSidebar()"><i class='bx bx-menu'></i></button>
+                <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Abrir menú de navegación"><i class='bx bx-menu'></i></button>
             </header>
+
+            <div style="background: linear-gradient(90deg, #8b5cf6, #38bdf8); color: white; text-align: center; padding: 10px; font-weight: bold; border-radius: 0 0 10px 10px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);">
+                🚀 ¡Disponible para prácticas o contratos Junior Backend/Frontend en 2026! <a href="mailto:izangarmatesanz@gmail.com" style="text-decoration: underline; color: #fff; cursor: pointer;">Contáctame</a>
+            </div>
 
             <div id="home" class="view active-view">
                 <div class="hero">
@@ -352,8 +359,8 @@
                         </div>
 
                         <div class="cta-group">
-                            <button class="btn primary" onclick="navigate('projects')">Ver Proyectos <i class='bx bx-right-arrow-alt'></i></button>
-                            <button class="btn secondary" onclick="navigate('about')">Más información</button>
+                            <a href="proyectos.html" class="btn primary">Ver Proyectos <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="sobre-mi.html" class="btn secondary">Más información</a>
                         </div>
                     </div>
 
@@ -372,28 +379,6 @@
                 </div>
             </div>
 
-            <div id="about" class="view">
-                <header class="section-header">
-                    <h2>Sobre Mí</h2>
-                    <p>Mi trayectoria y objetivos en el mundo tech.</p>
-                </header>
-                <div class="about-container">
-                    <div class="about-card glass">
-                        <p>¡Hola! Soy <strong>Izan García Matesanz</strong>, estudiante del Ciclo Superior de Desarrollo
-                            de Aplicaciones Multiplataforma (DAM) en el <strong>CES Juan Pablo Segundo</strong>.</p>
-                        <p>Me considero una persona curiosa y proactiva, siempre buscando aprender nuevas tecnologías y
-                            mejorar mis habilidades lógicas. Mi objetivo es convertirme en un desarrollador versátil
-                            capaz de enfrentar retos complejos tanto en backend como en frontend.</p>
-                        <div class="stats-grid">
-                            <div class="stat-item"><span class="stat-num">2026</span><span class="stat-label">Graduación</span></div>
-                            <div class="stat-item"><span class="stat-num">3+</span><span class="stat-label">Proyectos</span></div>
-                            <div class="stat-item"><span class="stat-num">Focus</span><span class="stat-label">Web & Java</span></div>
-                        </div>
-                    </div>
-                    <div class="about-image"><img src="about_bg.png" alt="Workspace Setup"></div>
-                </div>
-            </div>
-
             <div id="experience" class="view">
                 <header class="section-header">
                     <h2>Experiencia</h2>
@@ -409,14 +394,6 @@
                     </header>
                     <div class="rpg-stats-container" id="skills-container"></div>
                 </div>
-            </div>
-
-            <div id="projects" class="view">
-                <header class="section-header">
-                    <h2>Proyectos</h2>
-                    <p>Una selección de mis trabajos académicos y personales.</p>
-                </header>
-                <div class="projects-grid" id="projects-container"></div>
             </div>
 
             <div id="letter" class="view">
@@ -591,16 +568,6 @@
                     desc: "Gestión de clientes, soft skills y trabajo bajo presión."
                 }
             ],
-            projects: [
-                {
-                    name: "Portfolio Personal", desc: "SPA sin frameworks: HTML5, CSS3, JS Vanilla.",
-                    url: "https://github.com/izangarcia18", image: "project_1.png"
-                },
-                {
-                    name: "42 C Projects", desc: "Algoritmos de bajo nivel en C (libft, printf).",
-                    url: "https://www.42madrid.com", image: "project_3.png"
-                },
-            ],
         };
 
         const elements = {
@@ -656,20 +623,6 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div><span class="timeline-date">${e.date}</span>
                         <h3>${e.role}</h3><p class="timeline-company">// ${e.company}</p><p>${e.desc}</p>
-                    </div>`);
-            }
-
-            const projContainer = document.getElementById('projects-container');
-            if(projContainer) {
-                projContainer.innerHTML = html(contentData.projects, p => `
-                    <div class="project-card reveal">
-                        <div class="project-img">${p.image ? `<img src="${p.image}" alt="${p.name}">` : ''}</div>
-                        <div class="project-body">
-                            <h3 class="project-title">${p.name}</h3><p class="project-desc">${p.desc}</p>
-                            <div class="project-footer">
-                                <a href="${p.url}" target="_blank" class="project-link">Ver Proyecto</a>
-                            </div>
-                        </div>
                     </div>`);
             }
         }
@@ -750,7 +703,7 @@
 
         function loadTheme() {
             const themes = ['light-mode', 'dark-mode', 'hacker-mode'];
-            const current = localStorage.getItem('theme') || 'dark-mode'; // Default dark
+            const current = localStorage.getItem('theme') || 'dark-mode';
             elements.body.classList.add(current);
             elements.toggleBtn.addEventListener('click', () => {
                 const currentTheme = themes.find(t => elements.body.classList.contains(t));
@@ -764,6 +717,9 @@
             });
         }
     </script>
+    
+    <script src="//code.tidio.co/ficticio123456789.js" async></script>
 </body>
 </html>
-
+        
+       
