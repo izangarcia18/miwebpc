@@ -1,1 +1,131 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEYELJ2QC9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FEYELJ2QC9');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Izan García</title>
+    <meta name="description" content="Proyectos de programación y desarrollo web de Izan García.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        :root { --bg-color: #030014; --surface-color: rgba(17, 12, 34, 0.85); --text-primary: #f3f0ff; --text-secondary: #a78bfa; --primary-color: #8b5cf6; --primary-glow: rgba(139, 92, 246, 0.4); --accent-color: #38bdf8; --border-color: #2e1065; --sidebar-width: 260px; --font-main: 'Inter', sans-serif; --font-mono: 'JetBrains Mono', monospace; }
+        h1, h2, h3, .nav-item { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 2px; }
+        body { font-family: var(--font-main); background-color: var(--bg-color); background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 30px 30px; color: var(--text-primary); line-height: 1.6; margin: 0; overflow-x: hidden; cursor: none; }
+        a, button, .project-card { cursor: none; }
+        a { text-decoration: none; color: inherit; } ul { list-style: none; padding: 0;}
+        button { font-family: inherit; border: none; background: none; cursor: pointer; }
+        .cursor-dot { width: 8px; height: 8px; background-color: var(--accent-color); position: fixed; transform: translate(-50%, -50%); border-radius: 50%; z-index: 9999; pointer-events: none; }
+        .cursor-outline { width: 40px; height: 40px; border: 1px solid var(--primary-color); position: fixed; transform: translate(-50%, -50%); border-radius: 50%; z-index: 9998; pointer-events: none; transition: width 0.2s, height 0.2s, background-color 0.2s; }
+        body:has(a:hover) .cursor-outline, body:has(button:hover) .cursor-outline, body:has(.project-card:hover) .cursor-outline { width: 60px; height: 60px; background-color: rgba(37, 99, 235, 0.1); border-color: var(--accent-color); }
+        .app-container { display: flex; min-height: 100vh; }
+        .sidebar { width: var(--sidebar-width); height: 100vh; background: var(--surface-color); border-right: 1px solid var(--primary-color); position: fixed; padding: 2rem; display: flex; flex-direction: column; z-index: 100; box-sizing: border-box;}
+        .sidebar-header { margin-bottom: 3rem; text-align: center; }
+        .logo { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-color) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .role-subtitle { font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; }
+        .nav-menu { display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
+        .nav-item { display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 0.75rem; color: var(--text-secondary); transition: all 0.2s; font-weight: 500; font-size: 1rem; }
+        .nav-item i { font-size: 1.25rem; transition: transform 0.2s; }
+        .nav-item:hover { background: rgba(37, 99, 235, 0.05); color: var(--primary-color); }
+        .nav-item.active { background: rgba(0, 243, 255, 0.1); border-left: 4px solid var(--primary-color); color: var(--primary-color); }
+        .sidebar-footer { padding-top: 2rem; border-top: 1px solid var(--border-color); text-align: center; }
+        .social-links { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; font-size: 1.5rem; color: var(--text-secondary); }
+        .main-content { margin-left: var(--sidebar-width); width: calc(100% - var(--sidebar-width)); padding: 4rem 6rem; position: relative;}
+        .section-header { margin-bottom: 3rem; }
+        .section-header h2 { font-size: 2rem; background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-color) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-header p { color: var(--text-secondary); }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2.5rem; }
+        .project-card { background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 1.5rem; overflow: hidden; transition: all 0.4s ease; display: flex; flex-direction: column; }
+        .project-card:hover { transform: translateY(-10px); border-color: var(--accent-color); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); }
+        .project-img { height: 200px; background-color: #1e293b; overflow: hidden; }
+        .project-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .project-card:hover .project-img img { transform: scale(1.1); }
+        .project-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
+        .project-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .project-desc { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem; flex: 1; }
+        .project-link { color: var(--primary-color); font-weight: 600; padding: 0.5rem 1rem; border-radius: 0.5rem; background: rgba(37, 99, 235, 0.1); display: inline-flex; align-items: center; }
+        @media (max-width: 1024px) {
+            .sidebar { transform: translateX(-100%); transition: 0.3s; }
+            .main-content { margin-left: 0; width: 100%; padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <div class="app-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">IGM</div>
+                <p class="role-subtitle">Programador Junior</p>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-item"><i class='bx bx-home'></i> <span>Inicio</span></a>
+                <a href="../sobre-mi.html" class="nav-item"><i class='bx bx-user'></i> <span>Sobre Mí</span></a>
+                <a href="./" class="nav-item active"><i class='bx bx-folder'></i> <span>Proyectos</span></a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://github.com/izangarcia18" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <p class="copyright">&copy; 2026 Izan G.</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="section-header">
+                <h2>Mis Proyectos</h2>
+                <p>Una selección de mis trabajos académicos y personales.</p>
+            </header>
+            
+            <div class="projects-grid" id="projects-container"></div>
+        </main>
+    </div>
+
+    <script>
+        // Datos actualizados: añadimos ../ a las imágenes para que se encuentren en la raíz
+        const projects = [
+            { name: "Portfolio Personal", desc: "SPA sin frameworks: HTML5, CSS3, JS Vanilla.", url: "https://github.com/izangarcia18", image: "../project_1.png" },
+            { name: "42 C Projects", desc: "Algoritmos de bajo nivel en C (libft, printf).", url: "https://www.42madrid.com", image: "../project_3.png" },
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = projects.map(p => `
+                <div class="project-card">
+                    <div class="project-img"><img src="${p.image}" alt="${p.name}" onerror="this.style.display='none'"></div>
+                    <div class="project-body">
+                        <h3 class="project-title">${p.name}</h3><p class="project-desc">${p.desc}</p>
+                        <div style="text-align: right;">
+                            <a href="${p.url}" target="_blank" class="project-link">Ver Proyecto</a>
+                        </div>
+                    </div>
+                </div>`).join('');
+
+            const cursorDot = document.querySelector('[data-cursor-dot]');
+            const cursorOutline = document.querySelector('[data-cursor-outline]');
+            window.addEventListener("mousemove", e => {
+                cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                cursorOutline.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+            });
+        });
+    </script>
+    
+    <script src="//code.tidio.co/ysdr0seftxttbbzldiz0rqlybnw3cx59.js" async></script>
+</body>
+</html>
