@@ -13,14 +13,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos | Izan García</title>
-    <meta name="description" content="Proyectos de programación y desarrollo web de Izan García.">
+    <meta name="description" content="Explora los proyectos de programación y desarrollo web de Izan García, incluyendo SPA nativas y desarrollos en C.">
+
+    <link rel="canonical" href="https://izangarcia18.github.io/proyectos.html" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://izangarcia18.github.io/proyectos.html">
+    <meta property="og:title" content="Proyectos | Izan García">
+    <meta property="og:description" content="Explora los proyectos de programación y desarrollo web de Izan García, incluyendo SPA nativas y desarrollos en C.">
+    <meta property="og:image" content="https://izangarcia18.github.io/IMG_0174.jpeg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://izangarcia18.github.io/proyectos.html">
+    <meta name="twitter:title" content="Proyectos | Izan García">
+    <meta name="twitter:description" content="Explora los proyectos de programación y desarrollo web de Izan García, incluyendo SPA nativas y desarrollos en C.">
+    <meta name="twitter:image" content="https://izangarcia18.github.io/IMG_0174.jpeg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
-        /* Aquí va exactamente el mismo CSS que ya tenías en tu index.html */
+        /* CSS original */
         :root { --bg-color: #030014; --surface-color: rgba(17, 12, 34, 0.85); --text-primary: #f3f0ff; --text-secondary: #a78bfa; --primary-color: #8b5cf6; --primary-glow: rgba(139, 92, 246, 0.4); --accent-color: #38bdf8; --border-color: #2e1065; --sidebar-width: 260px; --font-main: 'Inter', sans-serif; --font-mono: 'JetBrains Mono', monospace; }
         h1, h2, h3, .nav-item { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 2px; }
         body { font-family: var(--font-main); background-color: var(--bg-color); background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 30px 30px; color: var(--text-primary); line-height: 1.6; margin: 0; overflow-x: hidden; cursor: none; }
@@ -61,9 +75,31 @@
             .main-content { margin-left: 0; width: 100%; padding: 2rem; }
             .mobile-header { display: flex; justify-content: space-between; padding: 1rem; background: var(--surface-color); border-bottom: 1px solid var(--border-color); }
         }
+
+        /* Accesibilidad: Enlace de salto al contenido */
+        .skip-to-content {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s ease;
+            font-family: var(--font-mono);
+            font-weight: bold;
+            border-bottom-right-radius: 8px;
+            text-decoration: none;
+        }
+        .skip-to-content:focus {
+            top: 0;
+            outline: 2px solid var(--accent-color);
+        }
     </style>
 </head>
 <body>
+    <a href="#contenido-principal" class="skip-to-content">Saltar al contenido principal</a>
+
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
 
@@ -89,7 +125,7 @@
             </div>
         </aside>
 
-        <main class="main-content">
+        <main id="contenido-principal" class="main-content">
             <header class="section-header">
                 <h2>Mis Proyectos</h2>
                 <p>Una selección de mis trabajos académicos y personales.</p>
